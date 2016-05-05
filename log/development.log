@@ -2824,3 +2824,862 @@ Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b9
 
 
 Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.215 at 2016-05-05 20:34:23 +0000
+
+
+Started GET "/" for 10.240.0.215 at 2016-05-05 23:06:11 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (87.5ms)
+  Rendered users/new.html.erb within layouts/application (100.5ms)
+Completed 200 OK in 737ms (Views: 684.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/books.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.185 at 2016-05-05 23:06:13 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.177 at 2016-05-05 23:06:13 +0000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.15 at 2016-05-05 23:06:13 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 10.240.0.225 at 2016-05-05 23:06:13 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 10.240.0.177 at 2016-05-05 23:06:13 +0000
+
+
+Started GET "/assets/loans.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.185 at 2016-05-05 23:06:13 +0000
+
+
+Started GET "/assets/scaffolds.self-0f6a7789b9552378dbdf4676c5fde35f6dd9f92e62075ed176621293277097de.css?body=1" for 10.240.0.225 at 2016-05-05 23:06:13 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 10.240.0.15 at 2016-05-05 23:06:13 +0000
+
+
+Started GET "/assets/turbolinks.self-c846e670826600e8c91b1a5ada3e6547110d996cd6ff24cde55024f7a135a1b4.js?body=1" for 10.240.0.188 at 2016-05-05 23:06:13 +0000
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.177 at 2016-05-05 23:06:13 +0000
+
+
+Started GET "/assets/loans.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.185 at 2016-05-05 23:06:13 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.225 at 2016-05-05 23:06:13 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.15 at 2016-05-05 23:06:13 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 10.240.0.177 at 2016-05-05 23:06:13 +0000
+
+
+Started GET "/loans" for 10.240.0.195 at 2016-05-05 23:06:16 +0000
+Processing by LoansController#index as HTML
+  [1m[35mLoan Load (0.3ms)[0m  SELECT `loans`.* FROM `loans`
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mBook Load (0.2ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1
+  Rendered loans/index.html.erb within layouts/application (96.3ms)
+Completed 200 OK in 202ms (Views: 185.2ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/loans" for 10.240.0.224 at 2016-05-05 23:06:17 +0000
+Processing by LoansController#index as HTML
+  [1m[36mLoan Load (0.2ms)[0m  [1mSELECT `loans`.* FROM `loans`[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1[0m
+  Rendered loans/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 88ms (Views: 86.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/loans" for 10.240.0.15 at 2016-05-05 23:06:55 +0000
+Processing by LoansController#index as HTML
+  [1m[35mLoan Load (0.3ms)[0m  SELECT `loans`.* FROM `loans`
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mBook Load (0.2ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1
+  Rendered loans/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 151ms (Views: 149.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/books.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.15 at 2016-05-05 23:06:55 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 10.240.0.15 at 2016-05-05 23:06:55 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 10.240.0.15 at 2016-05-05 23:06:55 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 10.240.0.195 at 2016-05-05 23:06:55 +0000
+
+
+Started GET "/assets/loans.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.225 at 2016-05-05 23:06:55 +0000
+
+
+Started GET "/assets/turbolinks.self-c846e670826600e8c91b1a5ada3e6547110d996cd6ff24cde55024f7a135a1b4.js?body=1" for 10.240.0.185 at 2016-05-05 23:06:55 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.215 at 2016-05-05 23:06:55 +0000
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.177 at 2016-05-05 23:06:55 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.15 at 2016-05-05 23:06:55 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 10.240.0.15 at 2016-05-05 23:06:55 +0000
+
+
+Started GET "/assets/loans.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.195 at 2016-05-05 23:06:55 +0000
+
+
+Started GET "/assets/scaffolds.self-0f6a7789b9552378dbdf4676c5fde35f6dd9f92e62075ed176621293277097de.css?body=1" for 10.240.0.225 at 2016-05-05 23:06:55 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.15 at 2016-05-05 23:06:55 +0000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.185 at 2016-05-05 23:06:55 +0000
+
+
+Started GET "/loans/new" for 10.240.0.195 at 2016-05-05 23:06:59 +0000
+Processing by LoansController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+  [1m[35mBook Load (0.2ms)[0m  SELECT `books`.* FROM `books`
+  Rendered loans/new.html.erb within layouts/application (29.2ms)
+Completed 200 OK in 89ms (Views: 87.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/loans" for 10.240.0.185 at 2016-05-05 23:07:05 +0000
+Processing by LoansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rMIeWkouXGZ/1sDItHnSuWTLRdFUmDpYqYSWRZEAWu26Wkwp3uuXfvKuuY1W7AB2m3bc7Ml3EoprQfX4Uqahfg==", "loan"=>{"user_id"=>"1", "book_id"=>"1", "start(1i)"=>"2016", "start(2i)"=>"5", "start(3i)"=>"5", "start(4i)"=>"23", "start(5i)"=>"06", "end(1i)"=>"2016", "end(2i)"=>"5", "end(3i)"=>"5", "end(4i)"=>"23", "end(5i)"=>"06"}, "commit"=>"Create Loan"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.5ms)[0m  INSERT INTO `loans` (`user_id`, `book_id`, `start`, `end`, `created_at`, `updated_at`) VALUES (1, 1, '2016-05-05 23:06:00.000000', '2016-05-05 23:06:00.000000', '2016-05-05 23:07:05', '2016-05-05 23:07:05')
+  [1m[36m (6.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://ramahe-p-workspace-malguesh.c9users.io:8081/loans/2
+Completed 302 Found in 18ms (ActiveRecord: 8.7ms)
+
+
+Started GET "/loans/2" for 10.240.0.185 at 2016-05-05 23:07:05 +0000
+Processing by LoansController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mLoan Load (0.8ms)[0m  SELECT  `loans`.* FROM `loans` WHERE `loans`.`id` = 2 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mBook Load (0.2ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1
+  Rendered loans/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 67ms (Views: 53.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/loans/2" for 10.240.0.224 at 2016-05-05 23:08:26 +0000
+Processing by LoansController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mLoan Load (0.3ms)[0m  [1mSELECT  `loans`.* FROM `loans` WHERE `loans`.`id` = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1[0m
+  Rendered loans/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 164ms (Views: 160.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/books.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.195 at 2016-05-05 23:08:27 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 10.240.0.196 at 2016-05-05 23:08:27 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 10.240.0.181 at 2016-05-05 23:08:27 +0000
+
+
+Started GET "/assets/turbolinks.self-c846e670826600e8c91b1a5ada3e6547110d996cd6ff24cde55024f7a135a1b4.js?body=1" for 10.240.0.195 at 2016-05-05 23:08:27 +0000
+
+
+Started GET "/assets/loans.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.224 at 2016-05-05 23:08:27 +0000
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.196 at 2016-05-05 23:08:27 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.225 at 2016-05-05 23:08:27 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.188 at 2016-05-05 23:08:27 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 10.240.0.224 at 2016-05-05 23:08:27 +0000
+
+
+Started GET "/assets/scaffolds.self-0f6a7789b9552378dbdf4676c5fde35f6dd9f92e62075ed176621293277097de.css?body=1" for 10.240.0.224 at 2016-05-05 23:08:27 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.224 at 2016-05-05 23:08:27 +0000
+
+
+Started GET "/assets/loans.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.15 at 2016-05-05 23:08:27 +0000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.224 at 2016-05-05 23:08:27 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 10.240.0.181 at 2016-05-05 23:08:27 +0000
+
+
+Started GET "/loans" for 10.240.0.224 at 2016-05-05 23:08:29 +0000
+Processing by LoansController#index as HTML
+  [1m[35mLoan Load (0.6ms)[0m  SELECT `loans`.* FROM `loans`
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mBook Load (0.2ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1  [["id", 1]]
+  Rendered loans/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 188ms (Views: 185.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/loans/new" for 10.240.0.224 at 2016-05-05 23:08:31 +0000
+Processing by LoansController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+  [1m[35mBook Load (0.2ms)[0m  SELECT `books`.* FROM `books`
+  Rendered loans/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 73ms (Views: 71.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/loans" for 10.240.0.224 at 2016-05-05 23:08:34 +0000
+Processing by LoansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q4kiYyZMjY5D8RTtyHjtJAGwltOpzpqkX/fjBmH1C8K9EXAQsolGls6Jbagq7T/r/g0P7jQhsnadMoC7olPwUQ==", "loan"=>{"user_id"=>"2", "book_id"=>"1", "start(1i)"=>"2016", "start(2i)"=>"5", "start(3i)"=>"5", "start(4i)"=>"23", "start(5i)"=>"08", "end(1i)"=>"2016", "end(2i)"=>"5", "end(3i)"=>"5", "end(4i)"=>"23", "end(5i)"=>"08"}, "commit"=>"Create Loan"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (133.8ms)[0m  INSERT INTO `loans` (`user_id`, `book_id`, `start`, `end`, `created_at`, `updated_at`) VALUES (2, 1, '2016-05-05 23:08:00.000000', '2016-05-05 23:08:00.000000', '2016-05-05 23:08:34', '2016-05-05 23:08:34')
+  [1m[36m (6.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://ramahe-p-workspace-malguesh.c9users.io:8081/loans/3
+Completed 302 Found in 147ms (ActiveRecord: 140.6ms)
+
+
+Started GET "/loans/3" for 10.240.0.224 at 2016-05-05 23:08:34 +0000
+Processing by LoansController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mLoan Load (1.2ms)[0m  SELECT  `loans`.* FROM `loans` WHERE `loans`.`id` = 3 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mBook Load (0.2ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1
+  Rendered loans/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 48ms (Views: 44.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/log_in" for 10.240.0.224 at 2016-05-05 23:08:46 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 58ms (Views: 57.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/loans" for 10.240.0.181 at 2016-05-05 23:09:25 +0000
+Processing by LoansController#index as HTML
+  [1m[36mLoan Load (1.2ms)[0m  [1mSELECT `loans`.* FROM `loans`[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  Rendered loans/index.html.erb within layouts/application (125.4ms)
+Completed 200 OK in 197ms (Views: 193.5ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/loans/1" for 10.240.0.181 at 2016-05-05 23:09:29 +0000
+Processing by LoansController#destroy as HTML
+  Parameters: {"authenticity_token"=>"bzE6/Wzk4pDq5eyHLez5RZ7fQX9o3Ui8HYaF60OVxsJ5qWiO+CEpiGedlcLPeSuKYWLYQvUyYG7fQ+ZWgDM9UQ==", "id"=>"1"}
+  [1m[35mLoan Load (0.7ms)[0m  SELECT  `loans`.* FROM `loans` WHERE `loans`.`id` = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (5.7ms)[0m  DELETE FROM `loans` WHERE `loans`.`id` = 1
+  [1m[36m (123.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://ramahe-p-workspace-malguesh.c9users.io:8081/loans
+Completed 302 Found in 134ms (ActiveRecord: 129.7ms)
+
+
+Started GET "/loans" for 10.240.0.181 at 2016-05-05 23:09:29 +0000
+Processing by LoansController#index as HTML
+  [1m[35mLoan Load (0.4ms)[0m  SELECT `loans`.* FROM `loans`
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mBook Load (0.2ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1  [["id", 1]]
+  Rendered loans/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 57ms (Views: 54.9ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/loans/2" for 10.240.0.224 at 2016-05-05 23:09:31 +0000
+Processing by LoansController#destroy as HTML
+  Parameters: {"authenticity_token"=>"AW724EJe49hH1oMaXh7kpt8IHPQrtTJjdtTaN9QtI3MX9qST1psowMqu+l+8izZpILWFybZaGrG0EbmKF4vY4A==", "id"=>"2"}
+  [1m[36mLoan Load (0.6ms)[0m  [1mSELECT  `loans`.* FROM `loans` WHERE `loans`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM `loans` WHERE `loans`.`id` = 2[0m
+  [1m[35m (6.7ms)[0m  COMMIT
+Redirected to http://ramahe-p-workspace-malguesh.c9users.io:8081/loans
+Completed 302 Found in 11ms (ActiveRecord: 7.8ms)
+
+
+Started GET "/loans" for 10.240.0.181 at 2016-05-05 23:09:31 +0000
+Processing by LoansController#index as HTML
+  [1m[36mLoan Load (0.4ms)[0m  [1mSELECT `loans`.* FROM `loans`[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1[0m
+  Rendered loans/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 53ms (Views: 51.2ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/loans/3" for 10.240.0.181 at 2016-05-05 23:09:33 +0000
+Processing by LoansController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ByqkuWgIE66/7TiznCjTkbSppr54TxxtNh8RaEdEMr4RsvbK/M3YtjKVQfZ+vQFeSxQ/g+WgNL/02nLVhOLJLQ==", "id"=>"3"}
+  [1m[35mLoan Load (0.5ms)[0m  SELECT  `loans`.* FROM `loans` WHERE `loans`.`id` = 3 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM `loans` WHERE `loans`.`id` = 3
+  [1m[36m (67.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://ramahe-p-workspace-malguesh.c9users.io:8081/loans
+Completed 302 Found in 72ms (ActiveRecord: 68.0ms)
+
+
+Started GET "/loans" for 10.240.0.15 at 2016-05-05 23:09:33 +0000
+Processing by LoansController#index as HTML
+  [1m[35mLoan Load (0.8ms)[0m  SELECT `loans`.* FROM `loans`
+  Rendered loans/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 43ms (Views: 41.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/loans/new" for 10.240.0.15 at 2016-05-05 23:09:35 +0000
+Processing by LoansController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+  [1m[35mBook Load (0.2ms)[0m  SELECT `books`.* FROM `books`
+  Rendered loans/new.html.erb within layouts/application (130.3ms)
+Completed 200 OK in 173ms (Views: 172.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/loans" for 10.240.0.181 at 2016-05-05 23:09:38 +0000
+Processing by LoansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eN4nsfd/8ECJxkWbhg10yiJVzlYOAzemCa/mQfhruBluRnXCY7o7WAS+PN5kmKYF3ehXa5PsH3TLaoX8O81Dig==", "loan"=>{"user_id"=>"1", "book_id"=>"1", "start(1i)"=>"2016", "start(2i)"=>"5", "start(3i)"=>"5", "start(4i)"=>"23", "start(5i)"=>"09", "end(1i)"=>"2016", "end(2i)"=>"5", "end(3i)"=>"5", "end(4i)"=>"23", "end(5i)"=>"09"}, "commit"=>"Create Loan"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `loans` (`user_id`, `book_id`, `start`, `end`, `created_at`, `updated_at`) VALUES (1, 1, '2016-05-05 23:09:00.000000', '2016-05-05 23:09:00.000000', '2016-05-05 23:09:38', '2016-05-05 23:09:38')
+  [1m[36m (5.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://ramahe-p-workspace-malguesh.c9users.io:8081/loans/4
+Completed 302 Found in 19ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/loans/4" for 10.240.0.181 at 2016-05-05 23:09:38 +0000
+Processing by LoansController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mLoan Load (0.6ms)[0m  SELECT  `loans`.* FROM `loans` WHERE `loans`.`id` = 4 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mBook Load (0.2ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1
+  Rendered loans/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 46ms (Views: 43.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/loans" for 10.240.0.181 at 2016-05-05 23:09:41 +0000
+Processing by LoansController#index as HTML
+  [1m[36mLoan Load (0.5ms)[0m  [1mSELECT `loans`.* FROM `loans`[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1[0m
+  Rendered loans/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 107ms (Views: 104.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/log_in" for 10.240.0.215 at 2016-05-05 23:10:00 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 75ms (Views: 56.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 10.240.0.195 at 2016-05-05 23:10:24 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o+UguTGZdHbKO+uOwC4C8ZUw4uJMVt4lqGdVXb14MDO1fXLKpVy/bkdDkssiu9A+ao1739G59vdqojbgft7LoA==", "email"=>"philou@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`email` = 'philou@gmail.com' LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 61ms (Views: 56.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/sessions" for 10.240.0.181 at 2016-05-05 23:11:05 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nQTxWgJbz2IdUTaRHS+bHssH4ufgrWQNIsXUuxYHRsCLnKMplp4EepApT9T/uknRNLp72n1CTN/gALcG1aG9Uw==", "email"=>"rama@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'rama@gmail.com' LIMIT 1[0m
+Redirected to http://ramahe-p-workspace-malguesh.c9users.io:8081/
+Completed 302 Found in 156ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 10.240.0.181 at 2016-05-05 23:11:05 +0000
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (6.2ms)
+  Rendered users/new.html.erb within layouts/application (9.5ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 200 OK in 69ms (Views: 67.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/loans" for 10.240.0.224 at 2016-05-05 23:11:09 +0000
+Processing by LoansController#index as HTML
+  [1m[36mLoan Load (0.2ms)[0m  [1mSELECT `loans`.* FROM `loans`[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mBook Load (1.8ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1[0m
+  Rendered loans/index.html.erb within layouts/application (5.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 147ms (Views: 143.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/loans" for 10.240.0.225 at 2016-05-05 23:11:09 +0000
+Processing by LoansController#index as HTML
+  [1m[36mLoan Load (0.4ms)[0m  [1mSELECT `loans`.* FROM `loans`[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1[0m
+  Rendered loans/index.html.erb within layouts/application (4.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 54ms (Views: 52.6ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/loans/4" for 10.240.0.185 at 2016-05-05 23:11:13 +0000
+Processing by LoansController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cXA3m5KitH04nfgKr6/cdQPmOjJvre/EBWHLNrx3rndn6GXoBmd/ZbXlgU9NOg66/FujD/JCxxbHpKiLf9FV5A==", "id"=>"4"}
+  [1m[36mLoan Load (0.2ms)[0m  [1mSELECT  `loans`.* FROM `loans` WHERE `loans`.`id` = 4 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM `loans` WHERE `loans`.`id` = 4[0m
+  [1m[35m (3.9ms)[0m  COMMIT
+Redirected to http://ramahe-p-workspace-malguesh.c9users.io:8081/loans
+Completed 302 Found in 180ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/loans" for 10.240.0.15 at 2016-05-05 23:11:13 +0000
+Processing by LoansController#index as HTML
+  [1m[36mLoan Load (0.4ms)[0m  [1mSELECT `loans`.* FROM `loans`[0m
+  Rendered loans/index.html.erb within layouts/application (1.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 200 OK in 65ms (Views: 63.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/loans/new" for 10.240.0.224 at 2016-05-05 23:11:14 +0000
+Processing by LoansController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+  [1m[35mBook Load (0.2ms)[0m  SELECT `books`.* FROM `books`
+  Rendered loans/new.html.erb within layouts/application (120.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 171ms (Views: 168.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/loans" for 10.240.0.181 at 2016-05-05 23:11:16 +0000
+Processing by LoansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z4sS2t7MqdQUngcRkR5KrehWECjDZ7glvMmYblr//w5xE0CpSglizJnmflRzi5hiF+uJFV6IkPd+DPvTmVkEnQ==", "loan"=>{"user_id"=>"1", "book_id"=>"1", "start(1i)"=>"2016", "start(2i)"=>"5", "start(3i)"=>"5", "start(4i)"=>"23", "start(5i)"=>"11", "end(1i)"=>"2016", "end(2i)"=>"5", "end(3i)"=>"5", "end(4i)"=>"23", "end(5i)"=>"11"}, "commit"=>"Create Loan"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `loans` (`user_id`, `book_id`, `start`, `end`, `created_at`, `updated_at`) VALUES (1, 1, '2016-05-05 23:11:00.000000', '2016-05-05 23:11:00.000000', '2016-05-05 23:11:16', '2016-05-05 23:11:16')[0m
+  [1m[35m (5.6ms)[0m  COMMIT
+Redirected to http://ramahe-p-workspace-malguesh.c9users.io:8081/loans/5
+Completed 302 Found in 152ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/loans/5" for 10.240.0.181 at 2016-05-05 23:11:17 +0000
+Processing by LoansController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mLoan Load (0.6ms)[0m  [1mSELECT  `loans`.* FROM `loans` WHERE `loans`.`id` = 5 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1[0m
+  Rendered loans/show.html.erb within layouts/application (4.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 64ms (Views: 61.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/log_out" for 10.240.0.181 at 2016-05-05 23:11:20 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to http://ramahe-p-workspace-malguesh.c9users.io:8081/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.240.0.181 at 2016-05-05 23:11:20 +0000
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (10.4ms)
+  Rendered users/new.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 67ms (Views: 66.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 10.240.0.181 at 2016-05-05 23:11:22 +0000
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (6.1ms)
+  Rendered users/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 66ms (Views: 65.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 10.240.0.181 at 2016-05-05 23:11:39 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zG5VVX1AKeMjBh4dot8l5V3kp+osopc782Z4YMLrFpva9gcm6YXi+65+Z1hASvcqolk+17FNv+kxoxvdAU3tCA==", "user"=>{"username"=>"test", "firstname"=>"test", "lastname"=>"test", "email"=>"test@test.fr", "adress1"=>"test", "adress2"=>"test", "phone_number"=>"65456454564", "isActive"=>"1", "isAdmin"=>"0", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (99.4ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'test@test.fr' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `users` (`username`, `firstname`, `lastname`, `email`, `adress1`, `adress2`, `phone_number`, `isActive`, `isAdmin`, `password_salt`, `password_hash`, `created_at`, `updated_at`) VALUES ('test', 'test', 'test', 'test@test.fr', 'test', 'test', '65456454564', 1, 0, '$2a$10$a6l6OFAUkACCxqXPrGsLpO', '$2a$10$a6l6OFAUkACCxqXPrGsLpOfxtx2CbTlEyoKl13UnztwRNcNbksRAG', '2016-05-05 23:11:39', '2016-05-05 23:11:39')[0m
+  [1m[35m (6.8ms)[0m  COMMIT
+Redirected to http://ramahe-p-workspace-malguesh.c9users.io:8081/users/3
+Completed 302 Found in 232ms (ActiveRecord: 107.2ms)
+
+
+Started GET "/users/3" for 10.240.0.15 at 2016-05-05 23:11:39 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 58ms (Views: 55.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/log_in" for 10.240.0.185 at 2016-05-05 23:11:41 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 55ms (Views: 53.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 10.240.0.15 at 2016-05-05 23:11:47 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i2sGhl2gCLtk4+f3/XKM0xi4av8cEYVCvlKzX3Lyjpud81T1yWXDo+mbnrIf514c5wXzwoH+rZB8l9DisVR1CA==", "email"=>"test@test.fr", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (1.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`email` = 'test@test.fr' LIMIT 1
+Redirected to http://ramahe-p-workspace-malguesh.c9users.io:8081/
+Completed 302 Found in 76ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 10.240.0.15 at 2016-05-05 23:11:47 +0000
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (5.6ms)
+  Rendered users/new.html.erb within layouts/application (8.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Completed 200 OK in 57ms (Views: 56.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/loans" for 10.240.0.185 at 2016-05-05 23:11:53 +0000
+Processing by LoansController#index as HTML
+  [1m[35mLoan Load (1.1ms)[0m  SELECT `loans`.* FROM `loans`
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mBook Load (0.3ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1
+  Rendered loans/index.html.erb within layouts/application (6.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Completed 200 OK in 71ms (Views: 68.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/loans" for 10.240.0.185 at 2016-05-05 23:11:53 +0000
+Processing by LoansController#index as HTML
+  [1m[35mLoan Load (0.2ms)[0m  SELECT `loans`.* FROM `loans`
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mBook Load (0.1ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1
+  Rendered loans/index.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Completed 200 OK in 54ms (Views: 52.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/loans/5/edit" for 10.240.0.181 at 2016-05-05 23:11:56 +0000
+Processing by LoansController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mLoan Load (0.2ms)[0m  SELECT  `loans`.* FROM `loans` WHERE `loans`.`id` = 5 LIMIT 1
+  Rendered loans/_form.html.erb (7.8ms)
+  Rendered loans/edit.html.erb within layouts/application (13.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Completed 200 OK in 88ms (Views: 85.4ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/loans/5" for 10.240.0.225 at 2016-05-05 23:11:58 +0000
+Processing by LoansController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pijSQmEu7MjOfJ2OwY2SeOfvgYfWoYuWJx9/6bnTiDuwsIAx9esn0EME5MsjGEC3GFIYuktOo0Tl2hxUenVzqA==", "loan"=>{"user_id"=>"1", "book_id"=>"1", "start(1i)"=>"2000", "start(2i)"=>"1", "start(3i)"=>"1", "start(4i)"=>"23", "start(5i)"=>"11", "end(1i)"=>"2000", "end(2i)"=>"1", "end(3i)"=>"1", "end(4i)"=>"23", "end(5i)"=>"11"}, "commit"=>"Update Loan", "id"=>"5"}
+  [1m[35mLoan Load (0.2ms)[0m  SELECT  `loans`.* FROM `loans` WHERE `loans`.`id` = 5 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Redirected to http://ramahe-p-workspace-malguesh.c9users.io:8081/loans/5
+Completed 302 Found in 181ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/loans/5" for 10.240.0.225 at 2016-05-05 23:11:59 +0000
+Processing by LoansController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mLoan Load (0.3ms)[0m  [1mSELECT  `loans`.* FROM `loans` WHERE `loans`.`id` = 5 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1[0m
+  Rendered loans/show.html.erb within layouts/application (4.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Completed 200 OK in 66ms (Views: 61.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/loans" for 10.240.0.15 at 2016-05-05 23:12:05 +0000
+Processing by LoansController#index as HTML
+  [1m[36mLoan Load (0.2ms)[0m  [1mSELECT `loans`.* FROM `loans`[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1[0m
+  Rendered loans/index.html.erb within layouts/application (3.7ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Completed 200 OK in 72ms (Views: 70.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/loans/new" for 10.240.0.185 at 2016-05-05 23:12:11 +0000
+Processing by LoansController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+  [1m[35mBook Load (0.2ms)[0m  SELECT `books`.* FROM `books`
+  Rendered loans/new.html.erb within layouts/application (11.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Completed 200 OK in 67ms (Views: 65.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/loans" for 10.240.0.195 at 2016-05-05 23:12:17 +0000
+Processing by LoansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M9fyd4/LhfKD2+lIpFWjE4auaKJLAgE34T4kLMW8GXYlT6AEGw5O6g6jkA1GwHHceRPxn9btKeUj+0eRBhri5Q==", "loan"=>{"user_id"=>"2", "book_id"=>"1", "start(1i)"=>"2016", "start(2i)"=>"5", "start(3i)"=>"5", "start(4i)"=>"23", "start(5i)"=>"12", "end(1i)"=>"2016", "end(2i)"=>"5", "end(3i)"=>"5", "end(4i)"=>"23", "end(5i)"=>"12"}, "commit"=>"Create Loan"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `loans` (`user_id`, `book_id`, `start`, `end`, `created_at`, `updated_at`) VALUES (2, 1, '2016-05-05 23:12:00.000000', '2016-05-05 23:12:00.000000', '2016-05-05 23:12:17', '2016-05-05 23:12:17')[0m
+  [1m[35m (5.9ms)[0m  COMMIT
+Redirected to http://ramahe-p-workspace-malguesh.c9users.io:8081/loans/6
+Completed 302 Found in 191ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/loans/6" for 10.240.0.224 at 2016-05-05 23:12:18 +0000
+Processing by LoansController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mLoan Load (0.7ms)[0m  [1mSELECT  `loans`.* FROM `loans` WHERE `loans`.`id` = 6 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1[0m
+  Rendered loans/show.html.erb within layouts/application (4.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Completed 200 OK in 67ms (Views: 63.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/loans" for 10.240.0.15 at 2016-05-05 23:12:20 +0000
+Processing by LoansController#index as HTML
+  [1m[36mLoan Load (0.6ms)[0m  [1mSELECT `loans`.* FROM `loans`[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (35.0ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  Rendered loans/index.html.erb within layouts/application (42.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Completed 200 OK in 101ms (Views: 63.7ms | ActiveRecord: 36.3ms)
+
+
+Started GET "/loans" for 10.240.0.181 at 2016-05-05 23:13:16 +0000
+Processing by LoansController#index as HTML
+  [1m[36mLoan Load (0.4ms)[0m  [1mSELECT `loans`.* FROM `loans`[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (162.6ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  Rendered loans/index.html.erb within layouts/application (172.7ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Completed 200 OK in 227ms (Views: 62.3ms | ActiveRecord: 163.8ms)
+
+
+Started GET "/assets/books.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.185 at 2016-05-05 23:13:17 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 10.240.0.15 at 2016-05-05 23:13:17 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 10.240.0.181 at 2016-05-05 23:13:17 +0000
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.195 at 2016-05-05 23:13:17 +0000
+
+
+Started GET "/assets/turbolinks.self-c846e670826600e8c91b1a5ada3e6547110d996cd6ff24cde55024f7a135a1b4.js?body=1" for 10.240.0.177 at 2016-05-05 23:13:17 +0000
+
+
+Started GET "/assets/loans.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.195 at 2016-05-05 23:13:17 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.181 at 2016-05-05 23:13:17 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.215 at 2016-05-05 23:13:17 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 10.240.0.177 at 2016-05-05 23:13:17 +0000
+
+
+Started GET "/assets/loans.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.188 at 2016-05-05 23:13:17 +0000
+
+
+Started GET "/assets/scaffolds.self-0f6a7789b9552378dbdf4676c5fde35f6dd9f92e62075ed176621293277097de.css?body=1" for 10.240.0.15 at 2016-05-05 23:13:17 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.195 at 2016-05-05 23:13:17 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 10.240.0.188 at 2016-05-05 23:13:17 +0000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.185 at 2016-05-05 23:13:17 +0000
+
+
+Started GET "/loans/5/edit" for 10.240.0.195 at 2016-05-05 23:13:19 +0000
+Processing by LoansController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mLoan Load (0.7ms)[0m  [1mSELECT  `loans`.* FROM `loans` WHERE `loans`.`id` = 5 LIMIT 1[0m
+  Rendered loans/_form.html.erb (7.6ms)
+  Rendered loans/edit.html.erb within layouts/application (19.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Completed 200 OK in 69ms (Views: 66.8ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/loans/5" for 10.240.0.195 at 2016-05-05 23:13:21 +0000
+Processing by LoansController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WzxXvLgIFcgzfOrDUYhannwgn6H404IDfjV2+tck1a5NpAXPLM3e0L4Ek4azHYhRg50GnGU8qtG88BVHFIIuPQ==", "loan"=>{"user_id"=>"1", "book_id"=>"1", "start(1i)"=>"2000", "start(2i)"=>"1", "start(3i)"=>"1", "start(4i)"=>"23", "start(5i)"=>"11", "end(1i)"=>"2000", "end(2i)"=>"1", "end(3i)"=>"1", "end(4i)"=>"23", "end(5i)"=>"11"}, "commit"=>"Update Loan", "id"=>"5"}
+  [1m[36mLoan Load (0.2ms)[0m  [1mSELECT  `loans`.* FROM `loans` WHERE `loans`.`id` = 5 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://ramahe-p-workspace-malguesh.c9users.io:8081/loans/5
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/loans/5" for 10.240.0.195 at 2016-05-05 23:13:21 +0000
+Processing by LoansController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mLoan Load (0.3ms)[0m  SELECT  `loans`.* FROM `loans` WHERE `loans`.`id` = 5 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mBook Load (0.3ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1
+  Rendered loans/show.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Completed 200 OK in 58ms (Views: 55.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/loans" for 10.240.0.185 at 2016-05-05 23:13:23 +0000
+Processing by LoansController#index as HTML
+  [1m[35mLoan Load (0.2ms)[0m  SELECT `loans`.* FROM `loans`
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mBook Load (0.1ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1  [["id", 1]]
+  Rendered loans/index.html.erb within layouts/application (6.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Completed 200 OK in 66ms (Views: 64.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/books" for 10.240.0.188 at 2016-05-05 23:13:31 +0000
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT `books`.* FROM `books`
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  Rendered books/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 83ms (Views: 81.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 10.240.0.224 at 2016-05-05 23:13:40 +0000
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users`
+  Rendered users/index.html.erb within layouts/application (7.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Completed 200 OK in 216ms (Views: 214.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/3/edit" for 10.240.0.224 at 2016-05-05 23:13:48 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  Rendered users/_form.html.erb (5.3ms)
+  Rendered users/edit.html.erb within layouts/application (170.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Completed 200 OK in 228ms (Views: 225.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1" for 10.240.0.195 at 2016-05-05 23:13:52 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  Rendered users/show.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Completed 200 OK in 62ms (Views: 59.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 10.240.0.195 at 2016-05-05 23:14:35 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (75.8ms)
+  Rendered users/new.html.erb within layouts/application (87.8ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Completed 200 OK in 659ms (Views: 614.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/users" for 10.240.0.185 at 2016-05-05 23:14:42 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+  Rendered users/index.html.erb within layouts/application (6.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Completed 200 OK in 81ms (Views: 78.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/books" for 10.240.0.185 at 2016-05-05 23:14:46 +0000
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT `books`.* FROM `books`[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  Rendered books/index.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 197ms (Views: 187.5ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/books" for 10.240.0.15 at 2016-05-05 23:14:49 +0000
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT `books`.* FROM `books`[0m
+  [1m[35mUser Load (1.8ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  Rendered books/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 181ms (Views: 177.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/books/1" for 10.240.0.15 at 2016-05-05 23:14:52 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1[0m
+  Rendered books/show.html.erb within layouts/application (2.8ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Completed 200 OK in 83ms (Views: 78.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/loans" for 10.240.0.185 at 2016-05-05 23:14:56 +0000
+Processing by LoansController#index as HTML
+  [1m[36mLoan Load (0.3ms)[0m  [1mSELECT `loans`.* FROM `loans`[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  Rendered loans/index.html.erb within layouts/application (86.4ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Completed 200 OK in 164ms (Views: 143.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/loans" for 10.240.0.225 at 2016-05-05 23:14:57 +0000
+Processing by LoansController#index as HTML
+  [1m[36mLoan Load (0.3ms)[0m  [1mSELECT `loans`.* FROM `loans`[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  Rendered loans/index.html.erb within layouts/application (7.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Completed 200 OK in 70ms (Views: 67.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/loans/new" for 10.240.0.181 at 2016-05-05 23:15:16 +0000
+Processing by LoansController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+  [1m[35mBook Load (0.3ms)[0m  SELECT `books`.* FROM `books`
+  Rendered loans/new.html.erb within layouts/application (40.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Completed 200 OK in 216ms (Views: 213.4ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/loans" for 10.240.0.225 at 2016-05-05 23:15:21 +0000
+Processing by LoansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gJ9LVos+adow3ZnLSin5fM1E2g0pV8gcMYk/PmvqsTaWBxklH/uiwr2l4I6ovCuzMvlDMLS44M7zTFyDqExKpQ==", "loan"=>{"user_id"=>"1", "book_id"=>"1", "start(1i)"=>"2016", "start(2i)"=>"5", "start(3i)"=>"5", "start(4i)"=>"23", "start(5i)"=>"15", "end(1i)"=>"2016", "end(2i)"=>"5", "end(3i)"=>"5", "end(4i)"=>"23", "end(5i)"=>"15"}, "commit"=>"Create Loan"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO `loans` (`user_id`, `book_id`, `start`, `end`, `created_at`, `updated_at`) VALUES (1, 1, '2016-05-05 23:15:00.000000', '2016-05-05 23:15:00.000000', '2016-05-05 23:15:21', '2016-05-05 23:15:21')[0m
+  [1m[35m (5.5ms)[0m  COMMIT
+Redirected to http://ramahe-p-workspace-malguesh.c9users.io:8081/loans/7
+Completed 302 Found in 18ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/loans/7" for 10.240.0.225 at 2016-05-05 23:15:21 +0000
+Processing by LoansController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mLoan Load (0.7ms)[0m  [1mSELECT  `loans`.* FROM `loans` WHERE `loans`.`id` = 7 LIMIT 1[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1[0m
+  Rendered loans/show.html.erb within layouts/application (8.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Completed 200 OK in 82ms (Views: 76.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/loans" for 10.240.0.215 at 2016-05-05 23:15:33 +0000
+Processing by LoansController#index as HTML
+  [1m[36mLoan Load (0.5ms)[0m  [1mSELECT `loans`.* FROM `loans`[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  Rendered loans/index.html.erb within layouts/application (38.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Completed 200 OK in 113ms (Views: 110.4ms | ActiveRecord: 1.6ms)
