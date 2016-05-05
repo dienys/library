@@ -28,9 +28,8 @@
     <%= f.text_field :author %>
   </div>
   <div class="field">
-   
-<%= f.check_box :status, {:multiple => "true"}, "Available", nil %> <%= f.check_box :status, {:multiple => "true"}, "Unvaiblable", nil %>
-    </div>
+    <%= f.select :status, options_for_select([['Available', 'available'], ['Unavailable', 'unavailable']]) %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
