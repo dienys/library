@@ -623,3 +623,808 @@ Processing by UsersController#new as HTML
   Rendered users/_form.html.erb (12.1ms)
   Rendered users/new.html.erb within layouts/application (18.4ms)
 Completed 200 OK in 87ms (Views: 85.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 37.228.239.236 at 2016-05-05 12:51:45 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (33.6ms)
+Completed 200 OK in 509ms (Views: 483.9ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 37.228.239.236 at 2016-05-05 12:51:46 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 37.228.239.236 at 2016-05-05 12:51:46 +0000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 37.228.239.236 at 2016-05-05 12:51:46 +0000
+
+
+Started GET "/assets/scaffolds.self-0f6a7789b9552378dbdf4676c5fde35f6dd9f92e62075ed176621293277097de.css?body=1" for 37.228.239.236 at 2016-05-05 12:51:46 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 37.228.239.236 at 2016-05-05 12:51:46 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 37.228.239.236 at 2016-05-05 12:51:46 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 37.228.239.236 at 2016-05-05 12:51:46 +0000
+
+
+Started GET "/assets/turbolinks.self-c846e670826600e8c91b1a5ada3e6547110d996cd6ff24cde55024f7a135a1b4.js?body=1" for 37.228.239.236 at 2016-05-05 12:51:46 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 37.228.239.236 at 2016-05-05 12:51:46 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 37.228.239.236 at 2016-05-05 12:51:46 +0000
+
+
+Started GET "/users/5" for 37.228.239.236 at 2016-05-05 12:51:52 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered users/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 113ms (Views: 62.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/5/edit" for 37.228.239.236 at 2016-05-05 12:51:54 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered users/_form.html.erb (91.2ms)
+  Rendered users/edit.html.erb within layouts/application (108.1ms)
+Completed 200 OK in 181ms (Views: 179.2ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/users/5" for 37.228.239.236 at 2016-05-05 12:52:01 +0000
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/AxQERX4tdeXiy3kHIRrlOo2KRywvGWMPe+SPG/AR5DMUyIzNj6t4Fa/3FjfphSPWlhFazRLAiVESW6q0G8XuA==", "user"=>{"username"=>"didi", "firstname"=>"Séverine", "lastname"=>"roy", "email"=>"severine.nexus@gmail.com", "adress1"=>"29 rue Gambetta", "adress2"=>"35", "phone_number"=>"64654", "isActive"=>"1", "isAdmin"=>"1", "password"=>"[FILTERED]"}, "commit"=>"Update User", "id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."email" = 'severine.nexus@gmail.com' AND "users"."id" != 5) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "users" SET "password_salt" = ?, "password_hash" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["password_salt", "$2a$10$GFrFBEC7Cyc9LWlUJFoo8e"], ["password_hash", "$2a$10$GFrFBEC7Cyc9LWlUJFoo8eEXMZu45udkXMtYFGJFuPcLTnFNRIm7K"], ["updated_at", "2016-05-05 12:52:01.575375"], ["id", 5]]
+  [1m[36m (15.7ms)[0m  [1mcommit transaction[0m
+Redirected to https://webframework-dienys.c9users.io/users/5
+Completed 302 Found in 229ms (ActiveRecord: 17.2ms)
+
+
+Started GET "/users/5" for 37.228.239.236 at 2016-05-05 12:52:01 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered users/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 113ms (Views: 102.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 37.228.239.236 at 2016-05-05 12:52:04 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 99ms (Views: 96.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/log_in" for 37.228.239.236 at 2016-05-05 12:52:06 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 59ms (Views: 58.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 37.228.239.236 at 2016-05-05 12:52:13 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8hdwd3zWQ7+hIYNvMvH3ntkFDBrZCCVT0xFKH+XpLZXCSAJVXxBbiGAVctPx04iFaWtgbV3/Qvqqt7aJWkZ9vQ==", "email"=>"severine.nexus@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "severine.nexus@gmail.com"]]
+Redirected to https://webframework-dienys.c9users.io/
+Completed 302 Found in 85ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 37.228.239.236 at 2016-05-05 12:52:13 +0000
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (10.7ms)
+  Rendered users/new.html.erb within layouts/application (16.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 92ms (Views: 82.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 37.228.239.236 at 2016-05-05 12:52:49 +0000
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 91ms (Views: 88.8ms | ActiveRecord: 0.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateBooks (20160505125513)
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "books" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "ISBN" varchar, "description" varchar, "author" varchar, "status" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160505125513"]]
+  [1m[36m (19.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateLoans (20160505125638)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "loans" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "start" datetime, "return" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160505125638"]]
+  [1m[36m (13.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 37.228.239.236 at 2016-05-05 13:09:15 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (85.8ms)
+  Rendered users/new.html.erb within layouts/application (104.8ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+Completed 200 OK in 929ms (Views: 866.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users" for 37.228.239.236 at 2016-05-05 13:09:26 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+Completed 200 OK in 87ms (Views: 85.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/5" for 37.228.239.236 at 2016-05-05 13:09:30 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered users/show.html.erb within layouts/application (2.6ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+Completed 200 OK in 142ms (Views: 135.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 37.228.239.236 at 2016-05-05 13:09:55 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (5.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+Completed 200 OK in 84ms (Views: 81.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/book" for 37.228.239.236 at 2016-05-05 13:09:58 +0000
+
+ActionController::RoutingError (No route matches [GET] "/book"):
+  web-console (2.0.0.beta3) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0.beta3) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.2) lib/rails/engine.rb:518:in `call'
+  railties (4.2.2) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (75.8ms)
+
+
+Started GET "/books" for 37.228.239.236 at 2016-05-05 13:10:02 +0000
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (6.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+Completed 200 OK in 87ms (Views: 80.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books/new" for 37.228.239.236 at 2016-05-05 13:10:04 +0000
+Processing by BooksController#new as HTML
+  Rendered books/_form.html.erb (21.5ms)
+  Rendered books/new.html.erb within layouts/application (27.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 119ms (Views: 105.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/books" for 37.228.239.236 at 2016-05-05 13:10:49 +0000
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kqm2rbKvvYUn5mFiJRY8jb2luAKzjevyNgN+FhKJLqei9sSPkWmlsubSkN7mNEOWDcvUdTd6jFtPpYKArSZ+jw==", "book"=>{"title"=>"Scientist", "ISBN"=>"15046CED", "description"=>"A book that deals with a scientist", "author"=>"B loub", "status"=>"enable"}, "commit"=>"Create Book"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "books" ("title", "ISBN", "description", "author", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Scientist"], ["ISBN", "15046CED"], ["description", "A book that deals with a scientist"], ["author", "B loub"], ["status", "enable"], ["created_at", "2016-05-05 13:10:49.723206"], ["updated_at", "2016-05-05 13:10:49.723206"]]
+  [1m[35m (75.3ms)[0m  commit transaction
+Redirected to https://webframework-dienys.c9users.io/books/1
+Completed 302 Found in 82ms (ActiveRecord: 76.0ms)
+
+
+Started GET "/books/1" for 37.228.239.236 at 2016-05-05 13:10:49 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered books/show.html.erb within layouts/application (1.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+Completed 200 OK in 74ms (Views: 72.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/books" for 37.228.239.236 at 2016-05-05 13:10:52 +0000
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (2.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+Completed 200 OK in 49ms (Views: 47.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 37.228.239.236 at 2016-05-05 13:14:27 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (71.9ms)
+  Rendered users/new.html.erb within layouts/application (87.7ms)
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+Completed 200 OK in 635ms (Views: 594.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/books.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 37.228.239.236 at 2016-05-05 13:14:28 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 37.228.239.236 at 2016-05-05 13:14:28 +0000
+
+
+Started GET "/assets/loans.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 37.228.239.236 at 2016-05-05 13:14:28 +0000
+
+
+Started GET "/assets/scaffolds.self-0f6a7789b9552378dbdf4676c5fde35f6dd9f92e62075ed176621293277097de.css?body=1" for 37.228.239.236 at 2016-05-05 13:14:28 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 37.228.239.236 at 2016-05-05 13:14:28 +0000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 37.228.239.236 at 2016-05-05 13:14:28 +0000
+
+
+Started GET "/assets/turbolinks.self-c846e670826600e8c91b1a5ada3e6547110d996cd6ff24cde55024f7a135a1b4.js?body=1" for 37.228.239.236 at 2016-05-05 13:14:28 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 37.228.239.236 at 2016-05-05 13:14:28 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 37.228.239.236 at 2016-05-05 13:14:28 +0000
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 37.228.239.236 at 2016-05-05 13:14:28 +0000
+
+
+Started GET "/assets/loans.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 37.228.239.236 at 2016-05-05 13:14:28 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 37.228.239.236 at 2016-05-05 13:14:28 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 37.228.239.236 at 2016-05-05 13:14:28 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 37.228.239.236 at 2016-05-05 13:14:28 +0000
+
+
+Started GET "/books" for 37.228.239.236 at 2016-05-05 13:14:36 +0000
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (15.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+Completed 200 OK in 86ms (Views: 80.7ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/books/1" for 37.228.239.236 at 2016-05-05 13:14:42 +0000
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+1f/QAx9zpNLDUrnwW5RQvoV7oBls/vIP8nmD8dzlTnLCI1iL7vWpIo5u1sCTC5ZSnuC9+FEnGFGbxqZeNzFEQ==", "id"=>"1"}
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "books" WHERE "books"."id" = ?[0m  [["id", 1]]
+  [1m[35m (48.3ms)[0m  commit transaction
+Redirected to https://webframework-dienys.c9users.io/books
+Completed 302 Found in 57ms (ActiveRecord: 49.4ms)
+
+
+Started GET "/books" for 37.228.239.236 at 2016-05-05 13:14:42 +0000
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (2.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+Completed 200 OK in 115ms (Views: 113.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/books/new" for 37.228.239.236 at 2016-05-05 13:14:43 +0000
+Processing by BooksController#new as HTML
+  Rendered books/_form.html.erb (10.7ms)
+  Rendered books/new.html.erb within layouts/application (72.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 159ms (Views: 157.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books" for 37.228.239.236 at 2016-05-05 13:17:18 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (8.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 670ms (Views: 644.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/books.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 37.228.239.236 at 2016-05-05 13:17:20 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 37.228.239.236 at 2016-05-05 13:17:20 +0000
+
+
+Started GET "/assets/scaffolds.self-0f6a7789b9552378dbdf4676c5fde35f6dd9f92e62075ed176621293277097de.css?body=1" for 37.228.239.236 at 2016-05-05 13:17:20 +0000
+
+
+Started GET "/assets/loans.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 37.228.239.236 at 2016-05-05 13:17:20 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 37.228.239.236 at 2016-05-05 13:17:20 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 37.228.239.236 at 2016-05-05 13:17:20 +0000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 37.228.239.236 at 2016-05-05 13:17:20 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 37.228.239.236 at 2016-05-05 13:17:20 +0000
+
+
+Started GET "/assets/turbolinks.self-c846e670826600e8c91b1a5ada3e6547110d996cd6ff24cde55024f7a135a1b4.js?body=1" for 37.228.239.236 at 2016-05-05 13:17:20 +0000
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 37.228.239.236 at 2016-05-05 13:17:20 +0000
+
+
+Started GET "/assets/loans.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 37.228.239.236 at 2016-05-05 13:17:20 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 37.228.239.236 at 2016-05-05 13:17:20 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 37.228.239.236 at 2016-05-05 13:17:20 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 37.228.239.236 at 2016-05-05 13:17:20 +0000
+
+
+Started GET "/books/new" for 37.228.239.236 at 2016-05-05 13:17:22 +0000
+Processing by BooksController#new as HTML
+  Rendered books/_form.html.erb (50.1ms)
+  Rendered books/new.html.erb within layouts/application (64.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+Completed 200 OK in 320ms (Views: 310.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 37.228.239.236 at 2016-05-05 13:21:03 +0000
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (29.8ms)
+  Rendered users/new.html.erb within layouts/application (37.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 186ms (Views: 182.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 37.228.239.236 at 2016-05-05 13:21:03 +0000
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (18.7ms)
+  Rendered users/new.html.erb within layouts/application (25.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+Completed 200 OK in 114ms (Views: 112.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 37.228.239.236 at 2016-05-05 13:21:47 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+2I3+xJeoubp3qQ7/gdj2VG1r6MzgIT+psHkZ2FRQtnLPUXZMZi60SjqVYc9JRzC4dvD1Ld341ffZxjx3v4S8Q==", "user"=>{"username"=>"philou", "firstname"=>"hilou", "lastname"=>"philou", "email"=>"philou@bloub.com", "adress1"=>"de", "adress2"=>"de", "phone_number"=>"564687676", "isActive"=>"1", "isAdmin"=>"1", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'philou@bloub.com' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("username", "firstname", "lastname", "email", "adress1", "adress2", "phone_number", "isActive", "isAdmin", "password_salt", "password_hash", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["username", "philou"], ["firstname", "hilou"], ["lastname", "philou"], ["email", "philou@bloub.com"], ["adress1", "de"], ["adress2", "de"], ["phone_number", "564687676"], ["isActive", "t"], ["isAdmin", "t"], ["password_salt", "$2a$10$wsjpjwXlbwBO9NYNu4/ts."], ["password_hash", "$2a$10$wsjpjwXlbwBO9NYNu4/ts.NdJGNPcIyrKPTqDmM4Ir8H4XxpUXyDa"], ["created_at", "2016-05-05 13:21:47.859252"], ["updated_at", "2016-05-05 13:21:47.859252"]]
+  [1m[35m (13.3ms)[0m  commit transaction
+Redirected to https://webframework-dienys.c9users.io/users/6
+Completed 302 Found in 160ms (ActiveRecord: 14.5ms)
+
+
+Started GET "/users/6" for 37.228.239.236 at 2016-05-05 13:21:47 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered users/show.html.erb within layouts/application (2.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+Completed 200 OK in 71ms (Views: 68.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/6/edit" for 37.228.239.236 at 2016-05-05 13:21:55 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered users/_form.html.erb (14.3ms)
+  Rendered users/edit.html.erb within layouts/application (24.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+Completed 200 OK in 109ms (Views: 106.9ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/users/6" for 37.228.239.236 at 2016-05-05 13:22:03 +0000
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ELvXQKLuVGYSZoH+hYgZ+2oNzzsIkaBdpoZ1lNgjSy8g5KVigShMUdNScEJGqmbg2mOjTIxmx/TfIIkCZ4wbBw==", "user"=>{"username"=>"philou", "firstname"=>"hilou", "lastname"=>"philou", "email"=>"philou@bloub.com", "adress1"=>"de", "adress2"=>"de", "phone_number"=>"564687676", "isActive"=>"1", "isAdmin"=>"1", "password"=>"[FILTERED]"}, "commit"=>"Update User", "id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."email" = 'philou@bloub.com' AND "users"."id" != 6) LIMIT 1[0m
+  [1m[35mSQL (1.1ms)[0m  UPDATE "users" SET "password_salt" = ?, "password_hash" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["password_salt", "$2a$10$kIkUp1XlIqvIeKX5XeKo7e"], ["password_hash", "$2a$10$kIkUp1XlIqvIeKX5XeKo7evC.vo46ootknZeWxifxX8rerhCCOsTO"], ["updated_at", "2016-05-05 13:22:03.287630"], ["id", 6]]
+  [1m[36m (17.1ms)[0m  [1mcommit transaction[0m
+Redirected to https://webframework-dienys.c9users.io/users/6
+Completed 302 Found in 116ms (ActiveRecord: 19.0ms)
+
+
+Started GET "/users/6" for 37.228.239.236 at 2016-05-05 13:22:03 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 109ms (Views: 103.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/log_out" for 37.228.239.236 at 2016-05-05 13:22:06 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to https://webframework-dienys.c9users.io/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 37.228.239.236 at 2016-05-05 13:22:06 +0000
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (18.6ms)
+  Rendered users/new.html.erb within layouts/application (28.4ms)
+Completed 200 OK in 163ms (Views: 161.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 37.228.239.236 at 2016-05-05 13:22:09 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 50ms (Views: 49.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 37.228.239.236 at 2016-05-05 13:22:18 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3fC550D7y4Fha7415hMqUorIOf/edB10L5L8ez/GWTDtr8vFYz3TtqBfT4klMVVJOqZViFqDet1WNADtgGkJGA==", "email"=>"philou@bloub.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "philou@bloub.com"]]
+Redirected to https://webframework-dienys.c9users.io/
+Completed 302 Found in 84ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 37.228.239.236 at 2016-05-05 13:22:18 +0000
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (7.7ms)
+  Rendered users/new.html.erb within layouts/application (15.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+Completed 200 OK in 92ms (Views: 89.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 37.228.239.236 at 2016-05-05 13:22:26 +0000
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (3.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+Completed 200 OK in 75ms (Views: 73.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for 37.228.239.236 at 2016-05-05 13:22:27 +0000
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+Completed 200 OK in 45ms (Views: 44.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/6/edit" for 37.228.239.236 at 2016-05-05 13:22:30 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered users/_form.html.erb (8.5ms)
+  Rendered users/edit.html.erb within layouts/application (21.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+Completed 200 OK in 104ms (Views: 100.4ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/users/6" for 37.228.239.236 at 2016-05-05 13:22:34 +0000
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2YBal9IUq/SgnpGfIR6qu2fGsdwKKlaTSYWgbj5SY3Xp3yi18dKzw2GqYCPiPNWg16jdq47dMTowI1z4gf0zXQ==", "user"=>{"username"=>"philou", "firstname"=>"hilou", "lastname"=>"philou", "email"=>"philou@bloub.com", "adress1"=>"de", "adress2"=>"deohideh", "phone_number"=>"564687676", "isActive"=>"1", "isAdmin"=>"1", "password"=>"[FILTERED]"}, "commit"=>"Update User", "id"=>"6"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."email" = 'philou@bloub.com' AND "users"."id" != 6) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "adress2" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["adress2", "deohideh"], ["updated_at", "2016-05-05 13:22:34.221527"], ["id", 6]]
+  [1m[35m (26.2ms)[0m  commit transaction
+Redirected to https://webframework-dienys.c9users.io/users/6
+Completed 302 Found in 36ms (ActiveRecord: 27.3ms)
+
+
+Started GET "/users/6" for 37.228.239.236 at 2016-05-05 13:22:34 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered users/show.html.erb within layouts/application (1.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+Completed 200 OK in 90ms (Views: 87.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 37.228.239.236 at 2016-05-05 13:24:10 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+Completed 200 OK in 77ms (Views: 74.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/log_out" for 37.228.239.236 at 2016-05-05 13:24:14 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to https://webframework-dienys.c9users.io/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 37.228.239.236 at 2016-05-05 13:24:14 +0000
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (21.1ms)
+  Rendered users/new.html.erb within layouts/application (28.9ms)
+Completed 200 OK in 101ms (Views: 99.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 37.228.239.236 at 2016-05-05 13:24:15 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 66ms (Views: 64.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 37.228.239.236 at 2016-05-05 13:24:17 +0000
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (5.4ms)
+  Rendered users/new.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 130ms (Views: 127.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books" for 37.228.239.236 at 2016-05-05 13:24:30 +0000
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 67ms (Views: 66.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/books/new" for 37.228.239.236 at 2016-05-05 13:24:33 +0000
+Processing by BooksController#new as HTML
+  Rendered books/_form.html.erb (7.7ms)
+  Rendered books/new.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 90ms (Views: 88.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books/new" for 37.228.239.236 at 2016-05-05 13:25:39 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#new as HTML
+  Rendered books/_form.html.erb (66.0ms)
+  Rendered books/new.html.erb within layouts/application (99.7ms)
+Completed 200 OK in 654ms (Views: 614.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/books.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 37.228.239.236 at 2016-05-05 13:25:41 +0000
+
+
+Started GET "/assets/scaffolds.self-0f6a7789b9552378dbdf4676c5fde35f6dd9f92e62075ed176621293277097de.css?body=1" for 37.228.239.236 at 2016-05-05 13:25:41 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 37.228.239.236 at 2016-05-05 13:25:41 +0000
+
+
+Started GET "/assets/loans.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 37.228.239.236 at 2016-05-05 13:25:41 +0000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 37.228.239.236 at 2016-05-05 13:25:41 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 37.228.239.236 at 2016-05-05 13:25:41 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 37.228.239.236 at 2016-05-05 13:25:41 +0000
+
+
+Started GET "/assets/turbolinks.self-c846e670826600e8c91b1a5ada3e6547110d996cd6ff24cde55024f7a135a1b4.js?body=1" for 37.228.239.236 at 2016-05-05 13:25:41 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 37.228.239.236 at 2016-05-05 13:25:41 +0000
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 37.228.239.236 at 2016-05-05 13:25:41 +0000
+
+
+Started GET "/assets/loans.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 37.228.239.236 at 2016-05-05 13:25:41 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 37.228.239.236 at 2016-05-05 13:25:41 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 37.228.239.236 at 2016-05-05 13:25:41 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 37.228.239.236 at 2016-05-05 13:25:41 +0000
+
+
+Started GET "/books/new" for 37.228.239.236 at 2016-05-05 13:27:38 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#new as HTML
+  Rendered books/_form.html.erb (69.8ms)
+  Rendered books/new.html.erb within layouts/application (88.5ms)
+Completed 200 OK in 543ms (Views: 509.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/loans.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 37.228.239.236 at 2016-05-05 13:27:40 +0000
+
+
+Started GET "/assets/books.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 37.228.239.236 at 2016-05-05 13:27:40 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 37.228.239.236 at 2016-05-05 13:27:40 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 37.228.239.236 at 2016-05-05 13:27:40 +0000
+
+
+Started GET "/assets/scaffolds.self-0f6a7789b9552378dbdf4676c5fde35f6dd9f92e62075ed176621293277097de.css?body=1" for 37.228.239.236 at 2016-05-05 13:27:40 +0000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 37.228.239.236 at 2016-05-05 13:27:40 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 37.228.239.236 at 2016-05-05 13:27:40 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 37.228.239.236 at 2016-05-05 13:27:40 +0000
+
+
+Started GET "/assets/turbolinks.self-c846e670826600e8c91b1a5ada3e6547110d996cd6ff24cde55024f7a135a1b4.js?body=1" for 37.228.239.236 at 2016-05-05 13:27:40 +0000
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 37.228.239.236 at 2016-05-05 13:27:40 +0000
+
+
+Started GET "/assets/loans.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 37.228.239.236 at 2016-05-05 13:27:40 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 37.228.239.236 at 2016-05-05 13:27:40 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 37.228.239.236 at 2016-05-05 13:27:40 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 37.228.239.236 at 2016-05-05 13:27:40 +0000
+
+
+Started POST "/books" for 37.228.239.236 at 2016-05-05 13:28:04 +0000
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Mog8ZnilLAWyijXTgCamCjsOdJHjH/Vo2f7c1fraWTIC105EW2M0MnO+xG9DBNkRi2AY5mfoksGgWCBDRXUJGg==", "book"=>{"title"=>"", "ISBN"=>"", "description"=>"", "author"=>"", "status"=>"0"}, "commit"=>"Create Book"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "books" ("title", "ISBN", "description", "author", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", ""], ["ISBN", ""], ["description", ""], ["author", ""], ["status", "0"], ["created_at", "2016-05-05 13:28:04.850208"], ["updated_at", "2016-05-05 13:28:04.850208"]]
+  [1m[35m (20.5ms)[0m  commit transaction
+Redirected to https://webframework-dienys.c9users.io/books/2
+Completed 302 Found in 38ms (ActiveRecord: 21.4ms)
+
+
+Started GET "/books/2" for 37.228.239.236 at 2016-05-05 13:28:04 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered books/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 142ms (Views: 112.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/books" for 37.228.239.236 at 2016-05-05 13:28:16 +0000
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 100ms (Views: 98.9ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/books/2" for 37.228.239.236 at 2016-05-05 13:28:19 +0000
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4MpPLgizitDe6cut6B2aAXvtc0KkEVvqkFIzHht0NcTQlT0MK3WS5x/dOhErP+Uay4MfNSDmPEPp9M+IpNtl7A==", "id"=>"2"}
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "books" WHERE "books"."id" = ?[0m  [["id", 2]]
+  [1m[35m (38.1ms)[0m  commit transaction
+Redirected to https://webframework-dienys.c9users.io/books
+Completed 302 Found in 50ms (ActiveRecord: 39.0ms)
+
+
+Started GET "/books" for 37.228.239.236 at 2016-05-05 13:28:19 +0000
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 67ms (Views: 65.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books/new" for 37.228.239.236 at 2016-05-05 13:31:26 +0000
+Processing by BooksController#new as HTML
+  Rendered books/_form.html.erb (6.1ms)
+  Rendered books/new.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 93ms (Views: 91.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books/new" for 37.228.239.236 at 2016-05-05 13:32:05 +0000
+Processing by BooksController#new as HTML
+  Rendered books/_form.html.erb (5.1ms)
+  Rendered books/new.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 98ms (Views: 97.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/books.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 37.228.239.236 at 2016-05-05 13:32:05 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 37.228.239.236 at 2016-05-05 13:32:05 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 37.228.239.236 at 2016-05-05 13:32:05 +0000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 37.228.239.236 at 2016-05-05 13:32:05 +0000
+
+
+Started GET "/assets/scaffolds.self-0f6a7789b9552378dbdf4676c5fde35f6dd9f92e62075ed176621293277097de.css?body=1" for 37.228.239.236 at 2016-05-05 13:32:05 +0000
+
+
+Started GET "/assets/loans.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 37.228.239.236 at 2016-05-05 13:32:05 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 37.228.239.236 at 2016-05-05 13:32:05 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 37.228.239.236 at 2016-05-05 13:32:05 +0000
+
+
+Started GET "/assets/turbolinks.self-c846e670826600e8c91b1a5ada3e6547110d996cd6ff24cde55024f7a135a1b4.js?body=1" for 37.228.239.236 at 2016-05-05 13:32:05 +0000
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 37.228.239.236 at 2016-05-05 13:32:05 +0000
+
+
+Started GET "/assets/loans.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 37.228.239.236 at 2016-05-05 13:32:05 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 37.228.239.236 at 2016-05-05 13:32:05 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 37.228.239.236 at 2016-05-05 13:32:05 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 37.228.239.236 at 2016-05-05 13:32:05 +0000
+
+
+Started POST "/books" for 37.228.239.236 at 2016-05-05 13:32:11 +0000
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iGgLSE50Zq1PRV904CEUSArIez8hJRHUurkBgs6puHi4N3lqbbJ+mo5xrsgjA2tTuqYXSKXSdn3DH/0UcQboUA==", "book"=>{"title"=>"", "ISBN"=>"", "description"=>"", "author"=>"", "status"=>["Unvaiblable"]}, "commit"=>"Create Book"}
+Unpermitted parameter: status
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "books" ("title", "ISBN", "description", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", ""], ["ISBN", ""], ["description", ""], ["author", ""], ["created_at", "2016-05-05 13:32:11.645740"], ["updated_at", "2016-05-05 13:32:11.645740"]]
+  [1m[35m (10.2ms)[0m  commit transaction
+Redirected to https://webframework-dienys.c9users.io/books/3
+Completed 302 Found in 16ms (ActiveRecord: 10.9ms)
+
+
+Started GET "/books/3" for 37.228.239.236 at 2016-05-05 13:32:11 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered books/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 115ms (Views: 113.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books/3/edit" for 37.228.239.236 at 2016-05-05 13:32:14 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mBook Load (0.2ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered books/_form.html.erb (3.9ms)
+  Rendered books/edit.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 73ms (Views: 71.6ms | ActiveRecord: 0.2ms)
