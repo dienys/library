@@ -3683,3 +3683,222 @@ Processing by LoansController#index as HTML
   Rendered loans/index.html.erb within layouts/application (38.8ms)
   [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
 Completed 200 OK in 113ms (Views: 110.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/books" for 10.240.0.224 at 2016-05-05 23:26:33 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.3ms)[0m  SELECT `books`.* FROM `books`
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  Rendered books/index.html.erb within layouts/application (69.7ms)
+Completed 200 OK in 1597ms (Views: 1573.8ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/assets/scaffolds.self-d1f6033a2a00b499c1b802e130f75b4290c3783f6d7a8ac30249032f736f9d72.css?body=1" for 10.240.0.177 at 2016-05-05 23:26:35 +0000
+
+
+Started GET "/log_out" for 10.240.0.224 at 2016-05-05 23:26:36 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to http://webframework-dienys.c9users.io:8081/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.240.0.224 at 2016-05-05 23:26:36 +0000
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (61.5ms)
+  Rendered users/new.html.erb within layouts/application (72.7ms)
+Completed 200 OK in 166ms (Views: 165.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 10.240.0.224 at 2016-05-05 23:26:38 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 77ms (Views: 76.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 10.240.0.215 at 2016-05-05 23:26:44 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oAdr8t+hq/ocK1JLuiSR+sCf6rv5KImnhKq9MgSSsiyQWBnQ/Gezzd0fo/d5Bu7hcPGGzH3f7g79DEGkuz3iBA==", "email"=>"severine.nexus@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`email` = 'severine.nexus@gmail.com' LIMIT 1
+Redirected to http://webframework-dienys.c9users.io:8081/
+Completed 302 Found in 79ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 10.240.0.224 at 2016-05-05 23:26:44 +0000
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (18.3ms)
+  Rendered users/new.html.erb within layouts/application (25.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 75ms (Views: 73.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books" for 10.240.0.195 at 2016-05-05 23:26:48 +0000
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.3ms)[0m  SELECT `books`.* FROM `books`
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered books/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 52ms (Views: 51.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/books" for 10.240.0.215 at 2016-05-05 23:26:49 +0000
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.3ms)[0m  SELECT `books`.* FROM `books`
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered books/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 55ms (Views: 54.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/loans/new.1" for 10.240.0.215 at 2016-05-05 23:26:51 +0000
+Processing by LoansController#new as 
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users`
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT `books`.* FROM `books`[0m
+  Rendered loans/new.html.erb within layouts/application (43.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 200 OK in 152ms (Views: 123.3ms | ActiveRecord: 4.6ms)
+
+
+Started POST "/loans" for 10.240.0.224 at 2016-05-05 23:26:54 +0000
+Processing by LoansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uXaNy3/k6GE2SDXsJZ2+hfvmjmnE9BK7y2aUeBtz2jeJKf/pXCLwVvd8xFDmv8GeS4jiHkADdRKywGjupNyKHw==", "loan"=>{"user_id"=>"1", "book_id"=>"1", "start(1i)"=>"2016", "start(2i)"=>"5", "start(3i)"=>"5", "start(4i)"=>"23", "start(5i)"=>"26", "end(1i)"=>"2016", "end(2i)"=>"5", "end(3i)"=>"5", "end(4i)"=>"23", "end(5i)"=>"26"}, "commit"=>"Create Loan"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (11.6ms)[0m  INSERT INTO `loans` (`user_id`, `book_id`, `start`, `end`, `created_at`, `updated_at`) VALUES (1, 1, '2016-05-05 23:26:00.000000', '2016-05-05 23:26:00.000000', '2016-05-05 23:26:54', '2016-05-05 23:26:54')
+  [1m[36m (6.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://webframework-dienys.c9users.io:8081/loans/8
+Completed 302 Found in 89ms (ActiveRecord: 18.2ms)
+
+
+Started GET "/loans/8" for 10.240.0.225 at 2016-05-05 23:26:54 +0000
+Processing by LoansController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mLoan Load (0.4ms)[0m  SELECT  `loans`.* FROM `loans` WHERE `loans`.`id` = 8 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mBook Load (0.5ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1
+  Rendered loans/show.html.erb within layouts/application (46.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 89ms (Views: 85.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/loans/8" for 10.240.0.185 at 2016-05-05 23:29:06 +0000
+Processing by LoansController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mLoan Load (0.2ms)[0m  SELECT  `loans`.* FROM `loans` WHERE `loans`.`id` = 8 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mBook Load (0.2ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1
+  Rendered loans/show.html.erb within layouts/application (2.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 212ms (Views: 209.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/books.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.224 at 2016-05-05 23:29:06 +0000
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.185 at 2016-05-05 23:29:06 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.15 at 2016-05-05 23:29:06 +0000
+
+
+Started GET "/assets/turbolinks.self-c846e670826600e8c91b1a5ada3e6547110d996cd6ff24cde55024f7a135a1b4.js?body=1" for 10.240.0.181 at 2016-05-05 23:29:06 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 10.240.0.224 at 2016-05-05 23:29:06 +0000
+
+
+Started GET "/assets/loans.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.225 at 2016-05-05 23:29:06 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 10.240.0.177 at 2016-05-05 23:29:06 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.185 at 2016-05-05 23:29:06 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 10.240.0.15 at 2016-05-05 23:29:06 +0000
+
+
+Started GET "/assets/loans.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.224 at 2016-05-05 23:29:06 +0000
+
+
+Started GET "/assets/scaffolds.self-d1f6033a2a00b499c1b802e130f75b4290c3783f6d7a8ac30249032f736f9d72.css?body=1" for 10.240.0.225 at 2016-05-05 23:29:06 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 10.240.0.15 at 2016-05-05 23:29:06 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.185 at 2016-05-05 23:29:06 +0000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.224 at 2016-05-05 23:29:06 +0000
+
+
+Started GET "/" for 10.240.0.185 at 2016-05-05 23:29:14 +0000
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (4.6ms)
+  Rendered users/new.html.erb within layouts/application (7.5ms)
+  [1m[35mUser Load (114.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 200 OK in 162ms (Views: 46.4ms | ActiveRecord: 114.2ms)
+
+
+Started GET "/books" for 10.240.0.15 at 2016-05-05 23:29:19 +0000
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT `books`.* FROM `books`[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  Rendered books/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 67ms (Views: 66.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/books" for 10.240.0.15 at 2016-05-05 23:29:20 +0000
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT `books`.* FROM `books`[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  Rendered books/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 45ms (Views: 43.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/log_out" for 10.240.0.185 at 2016-05-05 23:29:23 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to http://webframework-dienys.c9users.io:8081/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.240.0.224 at 2016-05-05 23:29:23 +0000
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (4.3ms)
+  Rendered users/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 56ms (Views: 55.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books" for 10.240.0.224 at 2016-05-05 23:29:26 +0000
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT `books`.* FROM `books`[0m
+  Rendered books/index.html.erb within layouts/application (10.5ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.3ms)
+
+NoMethodError (undefined method `isAdmin' for nil:NilClass):
+  app/views/books/index.html.erb:27:in `block in _app_views_books_index_html_erb__883610786756730548_69854758936160'
+  app/views/books/index.html.erb:18:in `_app_views_books_index_html_erb__883610786756730548_69854758936160'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_source.erb (15.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (114.4ms)
+
+
+Started GET "/books" for 10.240.0.225 at 2016-05-05 23:29:27 +0000
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.3ms)[0m  SELECT `books`.* FROM `books`
+  Rendered books/index.html.erb within layouts/application (7.9ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.3ms)
+
+NoMethodError (undefined method `isAdmin' for nil:NilClass):
+  app/views/books/index.html.erb:27:in `block in _app_views_books_index_html_erb__883610786756730548_69854758936160'
+  app/views/books/index.html.erb:18:in `_app_views_books_index_html_erb__883610786756730548_69854758936160'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_source.erb (25.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (108.8ms)
