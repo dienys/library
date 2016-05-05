@@ -18,7 +18,7 @@ class LoansControllerTest < ActionController::TestCase
 
   test "should create loan" do
     assert_difference('Loan.count') do
-      post :create, loan: { return: @loan.return, start: @loan.start }
+      post :create, loan: { book_id: @loan.book_id, end: @loan.end, start: @loan.start, user_id: @loan.user_id }
     end
 
     assert_redirected_to loan_path(assigns(:loan))
@@ -35,7 +35,7 @@ class LoansControllerTest < ActionController::TestCase
   end
 
   test "should update loan" do
-    patch :update, id: @loan, loan: { return: @loan.return, start: @loan.start }
+    patch :update, id: @loan, loan: { book_id: @loan.book_id, end: @loan.end, start: @loan.start, user_id: @loan.user_id }
     assert_redirected_to loan_path(assigns(:loan))
   end
 

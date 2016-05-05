@@ -1,13 +1,23 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>User:</strong>
+  <%= @loan.user.firstname %>
+</p>
+
+<p>
+  <strong>Book:</strong>
+  <%= @loan.book.title %>
+</p>
+
+<p>
   <strong>Start:</strong>
   <%= @loan.start %>
 </p>
 
 <p>
-  <strong>Return:</strong>
-  <%= @loan.return %>
+  <strong>End:</strong>
+  <%= @loan.end %>
 </p>
 
 <%= link_to 'Edit', edit_loan_path(@loan) %> |

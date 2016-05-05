@@ -11,40 +11,47 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160505125638) do
+ActiveRecord::Schema.define(version: 20160505202321) do
 
   create_table "books", force: :cascade do |t|
-    t.string   "title"
-    t.string   "ISBN"
-    t.string   "description"
-    t.string   "author"
-    t.string   "status"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "title",       limit: 255
+    t.string   "ISBN",        limit: 255
+    t.string   "description", limit: 255
+    t.string   "author",      limit: 255
+    t.string   "status",      limit: 255
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   create_table "loans", force: :cascade do |t|
-    t.datetime "start"
-    t.datetime "return"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "user_id",    limit: 4
+    t.integer  "book_id",    limit: 4
+    t.time     "start"
+    t.time     "end"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
   end
+
+  add_index "loans", ["book_id"], name: "index_loans_on_book_id", using: :btree
+  add_index "loans", ["user_id"], name: "index_loans_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
-    t.string   "username"
-    t.string   "firstname"
-    t.string   "lastname"
-    t.string   "email"
-    t.string   "adress1"
-    t.string   "adress2"
-    t.string   "phone_number"
-    t.boolean  "isActive"
-    t.boolean  "isAdmin"
-    t.string   "password"
-    t.string   "password_salt"
-    t.string   "password_hash"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.string   "username",      limit: 255
+    t.string   "firstname",     limit: 255
+    t.string   "lastname",      limit: 255
+    t.string   "email",         limit: 255
+    t.string   "adress1",       limit: 255
+    t.string   "adress2",       limit: 255
+    t.string   "phone_number",  limit: 255
+    t.boolean  "isActive",      limit: 1
+    t.boolean  "isAdmin",       limit: 1
+    t.string   "password",      limit: 255
+    t.string   "password_salt", limit: 255
+    t.string   "password_hash", limit: 255
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
+  add_foreign_key "loans", "books"
+  add_foreign_key "loans", "users"
 end

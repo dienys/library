@@ -12,12 +12,20 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :start %><br>
-    <%= f.datetime_select :start %>
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id %>
   </div>
   <div class="field">
-    <%= f.label :return %><br>
-    <%= f.datetime_select :return %>
+    <%= f.label :book_id %><br>
+    <%= f.text_field :book_id %>
+  </div>
+  <div class="field">
+    <%= f.label :start %><br>
+    <%= f.time_select :start %>
+  </div>
+  <div class="field">
+    <%= f.label :end %><br>
+    <%= f.time_select :end %>
   </div>
   <div class="actions">
     <%= f.submit %>
