@@ -1,0 +1,37 @@
+@import 'bootstrap';
+
+body {
+    padding-top: 60px;
+}
+
+section {
+    overflow: auto;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.center {
+    text-align: center;
+}
+
+.center h1 {
+    margin-bottom: 10px;
+}
+
+.thead-inverse tr {
+    color: #fff;
+    background-color: #373a3c;
+}
+
+.button_to input {
+    color: #fff;
+    background-color: #373a3c;
+    border-color: #ffffff;
+    border-radius: 5px;
+}
+
+.username {
+    color: #fff;
+}
