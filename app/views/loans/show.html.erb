@@ -19,9 +19,8 @@
   <strong>End:</strong>
   <%= @loan.end %>
 </p>
-
- <% b = Book.find_by(@loan.book.id)%>
-    <% b.update(status: "Loan")%>
+  <%= @loan.book.id %>
+  <% @loan.book.update(status: 'Loan') %>
 <p>
   
 <%= link_to 'Edit', edit_loan_path(@loan) %> |
