@@ -2,11 +2,17 @@
     <div class="container">
         <nav>
             <ul class="nav navbar-nav navbar-left">
-                
+              <li><%= link_to "Home", log_in_path %></li>
+              <% if current_user %>
+                <li><%= link_to "Books", books_url %></li>
+                  <% if current_user.isAdmin %>
+                  <li><%= link_to "Users", users_url %></li>
+                <% end %>
+              <% end %>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <% if current_user %>
-                <li class= "username">Logged in as <%= current_user.username %></li>
+                <li class="username">Logged in as <%= current_user.username %></li>
                 <li><%= link_to "Log out", log_out_path %></li>
               <% else %>
                 <li><%= link_to "Sign up", sign_up_path %></li>
