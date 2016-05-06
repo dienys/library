@@ -16,6 +16,9 @@
   <tbody>
     <% @loans.each do |loan| %>
       <tr>
+        <%if loan.book.status != "Loan"%>
+        <% loan.delete %>
+        <%end%>
         <td><%= loan.user.firstname %></td>
         <td><%= loan.book.title %></td>
         <td><%= loan.start %></td>

@@ -27,9 +27,15 @@
     <%= f.label :author %><br>
     <%= f.text_field :author %>
   </div>
+  <% if @book.status == "Loan"%>
+  <div class="field">
+    <%= f.select :status, options_for_select([['Available', 'available'], ['Unavailable', 'unavailable'], ['Loan', 'Loan']]) %>
+  </div>
+  <%else%>
   <div class="field">
     <%= f.select :status, options_for_select([['Available', 'available'], ['Unavailable', 'unavailable']]) %>
   </div>
+  <%end%>
   <div class="actions">
     <%= f.submit %>
   </div>
