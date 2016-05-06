@@ -15,7 +15,7 @@
 
  <div class="field">
    <%= f.label :user_id %><br>
-    <% user_array = User.all.map { |user| [user.firstname, user.id] } %>
+    <% user_array = User.all.where(isActive: true).map { |user| [user.firstname, user.id] } %>
    <%= f.select :user_id, options_for_select(user_array) %>
    
  </div>
