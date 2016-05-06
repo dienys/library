@@ -19,9 +19,6 @@
     <% @books.each do |book| %>
       <tr>
       <% @loans.each do |loan| %>
-       <% if book.id == loan.id %>
-       <book.status = "Loan"></book.status>
-       <%end %>
        <%end%>
        
        <% if current_user.isAdmin == true && book.status != "available" %>
