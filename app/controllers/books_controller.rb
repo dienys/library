@@ -3,8 +3,11 @@ class BooksController < ApplicationController
 
   # GET /books
   # GET /books.json
+  
+  
   def index
     @books = Book.all
+    @loans = Loan.all
   end
 
   # GET /books/1

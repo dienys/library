@@ -23,7 +23,11 @@
    <%= f.label :book_id %><br>
    <% book_array = Book.all.map { |book| [book.title, book.id] } %>
    <%= f.select :book_id, options_for_select(book_array) %>
+   
+    
  </div>
+
+
 <div class="field">
    <%= f.label :start %><br>
    <%= f.time_select :start %>
@@ -34,6 +38,8 @@
  </div>
  <div class="actions">
    <%= f.submit %>
+
+
  </div>
 <% end %>
 

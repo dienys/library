@@ -14,7 +14,8 @@ class LoansController < ApplicationController
 
   # GET /loans/new
   def new
-    @loan = Loan.new
+    @loan = Loan.new()
+    
   end
 
   # GET /loans/1/edit
