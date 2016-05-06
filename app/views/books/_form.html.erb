@@ -11,6 +11,7 @@
     </div>
   <% end %>
 
+<% if current_user.isAdmin == true %>
   <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
@@ -36,6 +37,15 @@
     <%= f.select :status, options_for_select([['Available', 'available'], ['Unavailable', 'unavailable']]) %>
   </div>
   <%end%>
+  <%end%>
+   <div class="field">
+    <%= f.label "Returned" %><br>
+    <%= f.radio_button(:status, "available") %>
+    <%= label_tag(:age_child, "yes") %>
+    <%= f.radio_button(:status, "loan") %>
+    <%= label_tag(:age_adult, "no") %>
+  </div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>

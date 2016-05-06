@@ -23,8 +23,6 @@
    <%= f.label :book_id %><br>
    <% book_array = Book.all.map { |book| [book.title, book.id] } %>
    <%= f.select :book_id, options_for_select(book_array) %>
-   
-    
  </div>
 
 

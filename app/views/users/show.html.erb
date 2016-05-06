@@ -45,11 +45,31 @@
   <%= @user.isAdmin %>
 </p>
 
-<p>
-  <strong>Password:</strong>
-  <%= @user.password %>
-</p>
 
+<table class="table table-inverse">
+ <thead class="thead-inverse">
+  <tr>
+  
+   <th>Rent books</th>
+  
+   <th colspan="3"></th>
+  </tr>
+ </thead>
+
+ <tr>
+ <% @loans.each do |loan| %>
+       <% if @user.id == loan.user.id %>
+            <td><%= loan.book.title %></td>
+             <% @books.each do |book| %>
+               <% if book.id == loan.book.id %>
+                  <td><%= link_to 'Return', edit_book_path(book) %></td>
+                  <td><%= link_to 'Show', book %></td>
+                <%end%>
+             <%end %>
+       <%end%>
+<%end%>
+        </tr>
+        </table>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

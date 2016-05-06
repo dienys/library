@@ -10,6 +10,8 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    @loans = Loan.all
+    @books = Book.all
   end
 
   # GET /users/new
