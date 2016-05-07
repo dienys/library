@@ -31,7 +31,7 @@ class LoansController < ApplicationController
       if @loan.save
         format.html { redirect_to @loan, notice: 'Loan was successfully created.' }
         format.json { render :show, status: :created, location: @loan }
-        params[:end] = 30.days
+        params[:end] =  30.days
       else
         format.html { render :new }
         format.json { render json: @loan.errors, status: :unprocessable_entity }
