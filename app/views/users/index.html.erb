@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Users</h1>
+<div class="view_title"><h1>Users</h1></div>
 
 <div class="row">
-  <div class="col-md-9 col-md-offset-1">
+  <div class="col-md-8 col-md-offset-2">
     <table class="table table-inverse">
       <thead class="thead-inverse">
         <tr>
@@ -52,7 +52,8 @@
   </div>
 </div>
 
-<br>
-<% if current_user.isAdmin == true %>
- <%= button_to 'New User', new_user_path, :method => "get" %>
-<% end %> 
+<div class="row">
+  <% if current_user.isAdmin == true %>
+   <%= button_to 'New User', new_user_path, :method => "get" %>
+  <% end %> 
+</div>

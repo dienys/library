@@ -1,85 +1,52 @@
 <p id="notice"><%= notice %></p>
-
+<div class="view_title"><h1><%= @user.username %></h1></div>
 <div class="row">
-    <table class="table table-inverse">
-        <thead class="thead-inverse">
-            <tr>
-                <th>User Informations</th>
-                <th colspan="3"></th>
-              </tr>
+    <div class="col-md-8 col-md-offset-2" style="margin-bottom:100px">
+        <table class="table table-inverse">
+            <thead class="thead-inverse">
+                <tr>
+                    <th>Username</th>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                    <th>Adress1</th>
+                    <th>Adress2</th>
+                    <th>Phone Number</th>
+                    <th>Status</th>
+                    <th>Role</th>
+                    <th colspan="3"></th>
+                </tr>
             </thead>
-
-    <ul>
-        <li>
-            <p>
-                <strong>Username:</strong>
-                <%= @user.username %>
-            </p>
-        </li>
-        <li>
-            <p>
-                <strong>Firstname:</strong>
-                <%= @user.firstname %>
-            </p>
-        </li>
-        <li>
-            <p>
-              <strong>Lastname:</strong>
-              <%= @user.lastname %>
-            </p>
-        </li>
-        <li>
-            <p>
-              <strong>Email:</strong>
-              <%= @user.email %>
-            </p>
-        </li>
-    
-        <li>
-            <p>
-              <strong>Adress1:</strong>
-              <%= @user.adress1 %>
-            </p>
-        </li>
-        <li>
-            <p>
-              <strong>Adress2:</strong>
-              <%= @user.adress2 %>
-            </p>
-        </li>
-        <li>
-            <p>
-              <strong>Phone number:</strong>
-              <%= @user.phone_number %>
-            </p>
-        </li>
-        <li>
-            <p>
-              <strong>Status:</strong>
-              <% if @user.isActive == true %>
-                  <%= "Active" %>
-              <% else %>
-                  <%= "Inactive" %>
-              <% end %>
-            </p>
-        </li>
-    
-        <li>
-            <p>
-              <strong>Role:</strong>
-              <% if @user.isAdmin %>
-                  <%= "Administrator" %>
-              <% else %>
-                  <%= "Member" %>
-              <% end %>
-            </p>
-        </li>
-    </ul>
+            <tbody>
+                <tr>
+                    <td><%= @user.username %></td>
+                    <td><%= @user.firstname%></td>
+                    <td><%= @user.lastname %></td>
+                    <td><%= @user.email %></td>
+                    <td><%= @user.adress1 %></td>
+                    <td><%= @user.adress2 %></td>
+                    <td><%= @user.phone_number %></td>
+                    <td>
+                        <% if @user.isActive == true %>
+                            <%= "Active" %>
+                        <% else %>
+                            <%= "Inative" %>
+                        <% end %>
+                    </td>
+                    <td>
+                        <% if @user.isAdmin == true %>
+                            <%= "Administrator" %>
+                        <% else %>
+                            <%= "Member" %>
+                        <% end %>
+                    </td>
+                </tr>
+            </tbody>
     </table>
 </div>
 
 <div class="row">
-    <div class="col-md-5 col-md-offset-4">
+    <div class="col-md-4 col-md-offset-4">
         <table class="table table-inverse">
             <thead class="thead-inverse">
               <tr>
