@@ -1,6 +1,7 @@
 class BooksController < ApplicationController
   before_action :set_book, only: [:show, :edit, :update, :destroy]
 
+
   # GET /books
   # GET /books.json
   
@@ -8,6 +9,11 @@ class BooksController < ApplicationController
   def index
     @books = Book.all
     @loans = Loan.all
+    if params[:search]
+    @books = Book.search(params[:search]).order("created_at DESC")
+  else
+    @rbooks = Book.all.order("created_at DESC")
+  end
   end
 
   # GET /books/1

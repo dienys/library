@@ -24,6 +24,11 @@ ActiveRecord::Schema.define(version: 20160507131526) do
     t.string   "image_url",   limit: 255
   end
 
+  create_table "books_users", id: false, force: :cascade do |t|
+    t.integer "user_id", limit: 4, null: false
+    t.integer "book_id", limit: 4, null: false
+  end
+
   create_table "loans", force: :cascade do |t|
     t.integer  "user_id",    limit: 4
     t.integer  "book_id",    limit: 4
