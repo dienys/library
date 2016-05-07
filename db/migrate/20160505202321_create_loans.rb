@@ -3,8 +3,8 @@ class CreateLoans < ActiveRecord::Migration
     create_table :loans do |t|
       t.references :user, index: true, foreign_key: true
       t.references :book, index: true, foreign_key: true
-      t.time :start
-      t.time :end
+      t.date :start
+      t.date :end
 
       t.timestamps null: false
     end

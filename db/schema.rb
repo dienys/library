@@ -32,8 +32,8 @@ ActiveRecord::Schema.define(version: 20160507131526) do
   create_table "loans", force: :cascade do |t|
     t.integer  "user_id",    limit: 4
     t.integer  "book_id",    limit: 4
-    t.time     "start"
-    t.time     "end"
+    t.date     "start"
+    t.date     "end"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
   end
