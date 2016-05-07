@@ -35,5 +35,9 @@
   </div>
 </div>
 
-<br>
+<div class="row">
+<% if current_user.isAdmin == true %>
+  <%= button_to 'New Loan', new_loan_path, :method => "get" %>
+<% end %>
+</div>
 
