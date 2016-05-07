@@ -1,75 +1,99 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Username:</strong>
-  <%= @user.username %>
-</p>
-
-<p>
-  <strong>Firstname:</strong>
-  <%= @user.firstname %>
-</p>
-
-<p>
-  <strong>Lastname:</strong>
-  <%= @user.lastname %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
-
-<p>
-  <strong>Adress1:</strong>
-  <%= @user.adress1 %>
-</p>
-
-<p>
-  <strong>Adress2:</strong>
-  <%= @user.adress2 %>
-</p>
-
-<p>
-  <strong>Phone number:</strong>
-  <%= @user.phone_number %>
-</p>
-
-<p>
-  <strong>Isactive:</strong>
-  <%= @user.isActive %>
-</p>
-
-<p>
-  <strong>Isadmin:</strong>
-  <%= @user.isAdmin %>
-</p>
-
+<div class="row">
+    <ul>
+        <li>
+            <p>
+                <strong>Username:</strong>
+                <%= @user.username %>
+            </p>
+        </li>
+        <li>
+            <p>
+                <strong>Firstname:</strong>
+                <%= @user.firstname %>
+            </p>
+        </li>
+        <li>
+            <p>
+              <strong>Lastname:</strong>
+              <%= @user.lastname %>
+            </p>
+        </li>
+        <li>
+            <p>
+              <strong>Email:</strong>
+              <%= @user.email %>
+            </p>
+        </li>
+    
+        <li>
+            <p>
+              <strong>Adress1:</strong>
+              <%= @user.adress1 %>
+            </p>
+        </li>
+        <li>
+            <p>
+              <strong>Adress2:</strong>
+              <%= @user.adress2 %>
+            </p>
+        </li>
+        <li>
+            <p>
+              <strong>Phone number:</strong>
+              <%= @user.phone_number %>
+            </p>
+        </li>
+        <li>
+            <p>
+              <strong>Status:</strong>
+              <% if @user.isActive == true %>
+                  <%= "Active" %>
+              <% else %>
+                  <%= "Inactive" %>
+              <% end %>
+            </p>
+        </li>
+    
+        <li>
+            <p>
+              <strong>Role:</strong>
+              <% if @user.isAdmin %>
+                  <%= "Administrator" %>
+              <% else %>
+                  <%= "Member" %>
+              <% end %>
+            </p>
+        </li>
+    </ul>
+</div>
 
 <table class="table table-inverse">
- <thead class="thead-inverse">
-  <tr>
-  
-   <th>Rent books</th>
-  
-   <th colspan="3"></th>
-  </tr>
- </thead>
-
- <tr>
- <% @loans.each do |loan| %>
-       <% if @user.id == loan.user.id %>
+    <thead class="thead-inverse">
+      <tr>
+       <th>Rent books</th>
+       <th colspan="3"></th>
+      </tr>
+    </thead>
+    <tbody>
+        <% @loans.each do |loan| %>
+          <tr>
+           <% if @user.id == loan.user.id %>
             <td><%= loan.book.title %></td>
-             <% @books.each do |book| %>
-               <% if book.id == loan.book.id %>
-                  <td><%= link_to 'Return', edit_book_path(book) %></td>
-                  <td><%= link_to 'Show', book %></td>
+            <% @books.each do |book| %>
+                <% if book.id == loan.book.id %>
+                    <td><%= link_to 'Return', edit_book_path(book) %></td>
+                    <td><%= link_to 'Show', book %></td>
                 <%end%>
-             <%end %>
-       <%end%>
-<%end%>
-        </tr>
-        </table>
+            <%end %>
+           <%end%>
+          </tr>
+        <%end%>
+    </tbody>
+</table>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<div class="links_to">
+    <%= link_to 'Edit', edit_user_path(@user) %> | 
+    <%= link_to 'Back', users_path %>
+</div>

@@ -1,29 +1,44 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @book.title %>
-</p>
+<div class="row">
+    <ul>
+      <li>
+        <p>
+          <strong>Title:</strong>
+          <%= @book.title %>
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Author:</strong>
+          <%= @book.author %>
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Description:</strong>
+          <%= @book.description %>
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Isbn:</strong>
+          <%= @book.ISBN %>
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Status:</strong>
+          <%= @book.status %>
+        </p>
+        </li>
+    </ul>
+  </div>
 
-<p>
-  <strong>Isbn:</strong>
-  <%= @book.ISBN %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @book.description %>
-</p>
-
-<p>
-  <strong>Author:</strong>
-  <%= @book.author %>
-</p>
-
-<p>
-  <strong>Status:</strong>
-  <%= @book.status %>
-</p>
-
-<%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to 'Back', books_path %>
+  <div class="links_to">
+    <ul>
+      <%= link_to 'Edit', edit_book_path(@book) %> |
+      <%= link_to 'Back', books_path %>
+    </ul>
+  </div>
+</div>
