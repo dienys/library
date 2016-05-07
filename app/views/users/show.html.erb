@@ -62,6 +62,7 @@
                     <% @books.each do |book| %>
                         <% if book.id == loan.book.id %>
                             <td><%= link_to 'Return', edit_book_path(book) %></td>
+
                             <td><%= link_to 'Show', book %></td>
                         <%end%>
                     <%end %>
