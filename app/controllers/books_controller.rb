@@ -13,7 +13,7 @@ class BooksController < ApplicationController
     @books = Book.search(params[:search]).order("created_at DESC")
   else
     @rbooks = Book.all.order("created_at DESC")
-  end
+    end
   end
 
   # GET /books/1
