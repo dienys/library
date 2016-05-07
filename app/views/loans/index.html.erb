@@ -21,7 +21,7 @@
             <%if loan.book.status != "Loan"%>
             <% loan.delete %>
             <%end%>
-            <td><%= loan.user.firstname %></td>
+            <td><%= loan.user.username %></td>
             <td><%= loan.book.title %></td>
             <td><%= loan.start %></td>
             <td><%= loan.end %></td>
