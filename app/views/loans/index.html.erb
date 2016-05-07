@@ -2,34 +2,38 @@
 
 <h1>Listing Loans</h1>
 
-<table class="table table-inverse">
-  <thead class="thead-inverse">
-    <tr>
-      <th>User</th>
-      <th>Book</th>
-      <th>Start</th>
-      <th>End</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @loans.each do |loan| %>
-      <tr>
-        <%if loan.book.status != "Loan"%>
-        <% loan.delete %>
-        <%end%>
-        <td><%= loan.user.firstname %></td>
-        <td><%= loan.book.title %></td>
-        <td><%= loan.start %></td>
-        <td><%= loan.end %></td>
-        <td><%= link_to 'Show', loan %></td>
-        <td><%= link_to 'Edit', edit_loan_path(loan) %></td>
-        <td><%= link_to 'Destroy', loan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="row">
+  <div class="col-md-9 col-md-offset-1">
+    <table class="table table-inverse">
+      <thead class="thead-inverse">
+        <tr>
+          <th>User</th>
+          <th>Book</th>
+          <th>Start</th>
+          <th>End</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+    
+      <tbody>
+        <% @loans.each do |loan| %>
+          <tr>
+            <%if loan.book.status != "Loan"%>
+            <% loan.delete %>
+            <%end%>
+            <td><%= loan.user.firstname %></td>
+            <td><%= loan.book.title %></td>
+            <td><%= loan.start %></td>
+            <td><%= loan.end %></td>
+            <td><%= link_to 'Show', loan %></td>
+            <td><%= link_to 'Edit', edit_loan_path(loan) %></td>
+            <td><%= link_to 'Destroy', loan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
 
 <br>
 
