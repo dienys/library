@@ -5,21 +5,48 @@ class LoansController < ApplicationController
   # GET /loans.json
   def index
     @loans = Loan.all
+    if !current_user
+      redirect_to home_path
+    else
+      if !current_user.isAdmin
+        redirect_to home_path
+      end
+    end
   end
 
   # GET /loans/1
   # GET /loans/1.json
   def show
+    if !current_user
+      redirect_to home_path
+    else
+      if !current_user.isAdmin
+        redirect_to home_path
+      end
+    end
   end
 
   # GET /loans/new
   def new
     @loan = Loan.new()
-    
+    if !current_user
+      redirect_to home_path
+    else
+      if !current_user.isAdmin
+        redirect_to home_path
+      end
+    end
   end
 
   # GET /loans/1/edit
   def edit
+    if !current_user
+      redirect_to home_path
+    else
+      if !current_user.isAdmin
+        redirect_to home_path
+      end
+    end
   end
 
   # POST /loans

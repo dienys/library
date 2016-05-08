@@ -5,6 +5,13 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
+    if !current_user
+      redirect_to home_path
+    else
+      if !current_user.isAdmin
+        redirect_to home_path
+      end
+    end
   end
 
   # GET /users/1
@@ -12,6 +19,13 @@ class UsersController < ApplicationController
   def show
     @loans = Loan.all
     @books = Book.all
+    if !current_user
+      redirect_to home_path
+    else
+      if current_user.id != @user.id && !current_user.isAdmin
+        redirect_to home_path
+      end
+    end
   end
 
   # GET /users/new
@@ -21,6 +35,13 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+    if !current_user
+      redirect_to home_path
+    else
+      if !current_user.isAdmin
+        redirect_to home_path
+      end
+    end
   end
 
   # POST /users

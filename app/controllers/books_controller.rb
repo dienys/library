@@ -14,21 +14,41 @@ class BooksController < ApplicationController
   else
     @rbooks = Book.all.order("created_at DESC")
     end
+    if !current_user
+      redirect_to home_path
+    end
   end
 
   # GET /books/1
   # GET /books/1.json
   
   def show
+    if !current_user
+      redirect_to home_path
+    end
   end
 
   # GET /books/new
   def new
     @book = Book.new
+    if !current_user
+      redirect_to home_path
+    else
+      if !current_user.isAdmin
+        redirect_to home_path
+      end
+    end
   end
 
   # GET /books/1/edit
   def edit
+    if !current_user
+      redirect_to home_path
+    else
+      if !current_user.isAdmin
+        redirect_to home_path
+      end
+    end
   end
 
   # POST /books
